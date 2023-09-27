@@ -35,8 +35,7 @@ class RegisterActivity : AppCompatActivity() {
                 if (checkBox.isChecked) {
                     val intentToHomeActivity =
                         Intent(this@RegisterActivity, HomeActivity::class.java)
-
-                     val username = usernameField.text.toString()
+                    val username = usernameField.text.toString()
                         intentToHomeActivity.putExtra(EXTRA_USERNAME,username)
 
                     val email = emailField.text.toString()

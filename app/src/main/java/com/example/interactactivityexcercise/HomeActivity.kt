@@ -20,12 +20,18 @@ class HomeActivity : AppCompatActivity() {
         val phone = intent.getStringExtra(EXTRA_PHONE)
 
         val logout = binding.logoutbtn
+        val presensi = binding.presentBtn
 
         with(binding){
             txtusername.text = "$username"
             txtemail.text = "$email"
             txtphone.text = "$phone"
         }
+
+        presensi.setOnClickListener{
+            present()
+        }
+
 
         logout.setOnClickListener {
             logOut()
@@ -34,6 +40,10 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
+    private fun present(){
+        val intent = Intent(this@HomeActivity, PresensiActivity::class.java)
+        startActivity(intent)
+    }
     private fun logOut() {
         val intent = Intent(this@HomeActivity, RegisterActivity::class.java)
         startActivity(intent)

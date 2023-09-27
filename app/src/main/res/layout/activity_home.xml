@@ -118,11 +118,11 @@
 
 
     <Button
-        android:id="@+id/logoutbtn"
+        android:id="@+id/presentBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_btn"
-        android:text="Logout"
+        android:text="Presensi"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -130,6 +130,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/logoutbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn"
+        android:layout_marginTop="10dp"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/presentBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
